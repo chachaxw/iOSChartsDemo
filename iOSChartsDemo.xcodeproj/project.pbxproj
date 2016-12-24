@@ -14,6 +14,8 @@
 		5F69BFF41B2A6B8200FB2CE0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F69BFF21B2A6B8200FB2CE0 /* LaunchScreen.xib */; };
 		5F69C0001B2A6B8300FB2CE0 /* iOSChartsDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F69BFFF1B2A6B8300FB2CE0 /* iOSChartsDemoTests.swift */; };
 		5F69C00A1B2A6CA200FB2CE0 /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F69C0091B2A6CA200FB2CE0 /* ChartsViewController.swift */; };
+		B6016C471E0EC76F0045EFD4 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6016C421E0EC6920045EFD4 /* Charts.framework */; };
+		B6016C481E0EC76F0045EFD4 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B6016C421E0EC6920045EFD4 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,7 +26,49 @@
 			remoteGlobalIDString = 5F69BFE31B2A6B8200FB2CE0;
 			remoteInfo = iOSChartsDemo;
 		};
+		B6016C411E0EC6920045EFD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B6016C3B1E0EC6920045EFD4 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06165F241D8110E600722320;
+			remoteInfo = Charts;
+		};
+		B6016C431E0EC6920045EFD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B6016C3B1E0EC6920045EFD4 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06B120D51D811E6200D14B02;
+			remoteInfo = ChartsRealm;
+		};
+		B6016C451E0EC6920045EFD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B6016C3B1E0EC6920045EFD4 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06165F2E1D8110E600722320;
+			remoteInfo = ChartsTests;
+		};
+		B6016C491E0EC76F0045EFD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B6016C3B1E0EC6920045EFD4 /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 06165F231D8110E600722320;
+			remoteInfo = Charts;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B6016C4B1E0EC76F0045EFD4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B6016C481E0EC76F0045EFD4 /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5F69BFE41B2A6B8200FB2CE0 /* iOSChartsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSChartsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +82,7 @@
 		5F69BFFE1B2A6B8300FB2CE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F69BFFF1B2A6B8300FB2CE0 /* iOSChartsDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSChartsDemoTests.swift; sourceTree = "<group>"; };
 		5F69C0091B2A6CA200FB2CE0 /* ChartsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
+		B6016C3B1E0EC6920045EFD4 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = Charts/Charts.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6016C471E0EC76F0045EFD4 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +107,7 @@
 		5F69BFDB1B2A6B8200FB2CE0 = {
 			isa = PBXGroup;
 			children = (
+				B6016C3B1E0EC6920045EFD4 /* Charts.xcodeproj */,
 				5F69BFE61B2A6B8200FB2CE0 /* iOSChartsDemo */,
 				5F69BFFC1B2A6B8300FB2CE0 /* iOSChartsDemoTests */,
 				5F69BFE51B2A6B8200FB2CE0 /* Products */,
@@ -115,6 +162,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B6016C3C1E0EC6920045EFD4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B6016C421E0EC6920045EFD4 /* Charts.framework */,
+				B6016C441E0EC6920045EFD4 /* ChartsRealm.framework */,
+				B6016C461E0EC6920045EFD4 /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -125,10 +182,12 @@
 				5F69BFE01B2A6B8200FB2CE0 /* Sources */,
 				5F69BFE11B2A6B8200FB2CE0 /* Frameworks */,
 				5F69BFE21B2A6B8200FB2CE0 /* Resources */,
+				B6016C4B1E0EC76F0045EFD4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B6016C4A1E0EC76F0045EFD4 /* PBXTargetDependency */,
 			);
 			name = iOSChartsDemo;
 			productName = iOSChartsDemo;
@@ -164,9 +223,12 @@
 				TargetAttributes = {
 					5F69BFE31B2A6B8200FB2CE0 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = K9G8A2A8Q6;
+						LastSwiftMigration = 0820;
 					};
 					5F69BFF81B2A6B8300FB2CE0 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0820;
 						TestTargetID = 5F69BFE31B2A6B8200FB2CE0;
 					};
 				};
@@ -182,6 +244,12 @@
 			mainGroup = 5F69BFDB1B2A6B8200FB2CE0;
 			productRefGroup = 5F69BFE51B2A6B8200FB2CE0 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B6016C3C1E0EC6920045EFD4 /* Products */;
+					ProjectRef = B6016C3B1E0EC6920045EFD4 /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				5F69BFE31B2A6B8200FB2CE0 /* iOSChartsDemo */,
@@ -189,6 +257,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B6016C421E0EC6920045EFD4 /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = B6016C411E0EC6920045EFD4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B6016C441E0EC6920045EFD4 /* ChartsRealm.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ChartsRealm.framework;
+			remoteRef = B6016C431E0EC6920045EFD4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B6016C461E0EC6920045EFD4 /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = B6016C451E0EC6920045EFD4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		5F69BFE21B2A6B8200FB2CE0 /* Resources */ = {
@@ -236,6 +328,11 @@
 			isa = PBXTargetDependency;
 			target = 5F69BFE31B2A6B8200FB2CE0 /* iOSChartsDemo */;
 			targetProxy = 5F69BFFA1B2A6B8300FB2CE0 /* PBXContainerItemProxy */;
+		};
+		B6016C4A1E0EC76F0045EFD4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Charts;
+			targetProxy = B6016C491E0EC76F0045EFD4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -345,20 +442,28 @@
 		5F69C0041B2A6B8300FB2CE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K9G8A2A8Q6;
 				INFOPLIST_FILE = iOSChartsDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = chacha.iOSChartsDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		5F69C0051B2A6B8300FB2CE0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K9G8A2A8Q6;
 				INFOPLIST_FILE = iOSChartsDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = chacha.iOSChartsDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -377,6 +482,7 @@
 				INFOPLIST_FILE = iOSChartsDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSChartsDemo.app/iOSChartsDemo";
 			};
 			name = Debug;
@@ -392,6 +498,7 @@
 				INFOPLIST_FILE = iOSChartsDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSChartsDemo.app/iOSChartsDemo";
 			};
 			name = Release;
@@ -415,6 +522,7 @@
 				5F69C0051B2A6B8300FB2CE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5F69C0061B2A6B8300FB2CE0 /* Build configuration list for PBXNativeTarget "iOSChartsDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +531,7 @@
 				5F69C0081B2A6B8300FB2CE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
