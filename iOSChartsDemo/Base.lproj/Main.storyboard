@@ -26,39 +26,53 @@
                                 <rect key="frame" x="0.0" y="110" width="375" height="557"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lUU-61-WKM">
-                                <rect key="frame" x="16" y="72" width="289" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBA-ap-vfX">
-                                <rect key="frame" x="321" y="71" width="30" height="30"/>
+                                <rect key="frame" x="282" y="72" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="addBtnTapper:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8sW-8r-gfC"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WYY-NF-GXO">
+                                <rect key="frame" x="16" y="72" width="250" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2P6-Rc-YxQ">
+                                <rect key="frame" x="323" y="72" width="36" height="30"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fDr-iX-A1H"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="XBA-ap-vfX" firstAttribute="leading" secondItem="lUU-61-WKM" secondAttribute="trailing" constant="16" id="1ck-b7-DjI"/>
-                            <constraint firstItem="MLy-Ta-0hc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="2bd-ng-dTp"/>
-                            <constraint firstItem="MLy-Ta-0hc" firstAttribute="top" secondItem="lUU-61-WKM" secondAttribute="bottom" constant="8" id="4kL-PR-MWh"/>
-                            <constraint firstItem="XBA-ap-vfX" firstAttribute="baseline" secondItem="lUU-61-WKM" secondAttribute="baseline" id="7jg-7I-z7C"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MLy-Ta-0hc" secondAttribute="bottom" id="8Up-v5-j22"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="XBA-ap-vfX" secondAttribute="trailing" constant="8" id="9nZ-Qk-jst"/>
-                            <constraint firstItem="lUU-61-WKM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="FB5-y4-XCs"/>
-                            <constraint firstItem="MLy-Ta-0hc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="46" id="Ydd-Bf-8K7"/>
-                            <constraint firstItem="lUU-61-WKM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="pdX-ig-56X"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="MLy-Ta-0hc" secondAttribute="trailing" constant="-16" id="sbM-Ec-9hV"/>
+                            <constraint firstItem="MLy-Ta-0hc" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="1yf-lR-Iye"/>
+                            <constraint firstItem="XBA-ap-vfX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="68H-F1-h2t"/>
+                            <constraint firstItem="2P6-Rc-YxQ" firstAttribute="leading" secondItem="XBA-ap-vfX" secondAttribute="trailing" constant="11" id="9O3-n1-62L"/>
+                            <constraint firstItem="XBA-ap-vfX" firstAttribute="leading" secondItem="WYY-NF-GXO" secondAttribute="trailing" constant="16" id="Cza-Re-wJr"/>
+                            <constraint firstItem="XBA-ap-vfX" firstAttribute="leading" secondItem="WYY-NF-GXO" secondAttribute="trailing" constant="16" id="Dwq-tR-hhP"/>
+                            <constraint firstItem="MLy-Ta-0hc" firstAttribute="top" secondItem="2P6-Rc-YxQ" secondAttribute="bottom" constant="8" id="E0V-2G-yH2"/>
+                            <constraint firstItem="MLy-Ta-0hc" firstAttribute="top" secondItem="WYY-NF-GXO" secondAttribute="bottom" constant="8" id="Eus-fi-Gxr"/>
+                            <constraint firstItem="2P6-Rc-YxQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="M4z-bn-5uP"/>
+                            <constraint firstItem="2P6-Rc-YxQ" firstAttribute="leading" secondItem="XBA-ap-vfX" secondAttribute="trailing" constant="11" id="Nx7-TU-35C"/>
+                            <constraint firstItem="MLy-Ta-0hc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PNq-xU-lvz"/>
+                            <constraint firstItem="2P6-Rc-YxQ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="TDA-ys-DCt"/>
+                            <constraint firstItem="WYY-NF-GXO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="WX2-uh-Kot"/>
+                            <constraint firstItem="WYY-NF-GXO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="euX-hA-Wy6"/>
+                            <constraint firstAttribute="trailing" secondItem="MLy-Ta-0hc" secondAttribute="trailing" id="lok-WA-SdJ"/>
+                            <constraint firstItem="MLy-Ta-0hc" firstAttribute="top" secondItem="XBA-ap-vfX" secondAttribute="bottom" constant="8" id="t0X-8m-Mk6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Bar Chart" id="QjT-oE-2uh"/>
                     <connections>
                         <outlet property="addButton" destination="XBA-ap-vfX" id="BSe-CD-9Pv"/>
                         <outlet property="barView" destination="MLy-Ta-0hc" id="L0u-ES-pCW"/>
-                        <outlet property="textValue" destination="lUU-61-WKM" id="CwV-3l-TJB"/>
+                        <outlet property="textValue" destination="WYY-NF-GXO" id="Afe-j2-59U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

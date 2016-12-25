@@ -25,9 +25,13 @@ class BarChartViewController: UIViewController {
             visitorCount.save()
             textValue.text = ""
         }
+
         updateChartWithData()
     }
     
+    @IBAction func deleteBtn(_ sender: Any) {
+        print(barView.data ?? "没有数据")
+    }
     weak var axisFormatDelegate: IAxisValueFormatter?
     
     override func viewDidLoad() {

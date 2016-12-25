@@ -24,5 +24,12 @@ class VisitorCount: Object {
         }
     }
     
-    
+    func delete() {
+        do {
+            let realm = try Realm()
+            realm.deleteAll()
+        } catch let error as NSError {
+            fatalError(error.localizedDescription)
+        }
+    }
 }
