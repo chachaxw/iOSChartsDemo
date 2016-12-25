@@ -12,9 +12,10 @@
 		5F69BFEF1B2A6B8200FB2CE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F69BFED1B2A6B8200FB2CE0 /* Main.storyboard */; };
 		5F69BFF11B2A6B8200FB2CE0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F69BFF01B2A6B8200FB2CE0 /* Images.xcassets */; };
 		5F69BFF41B2A6B8200FB2CE0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F69BFF21B2A6B8200FB2CE0 /* LaunchScreen.xib */; };
-		5F69C00A1B2A6CA200FB2CE0 /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F69C0091B2A6CA200FB2CE0 /* ChartsViewController.swift */; };
+		5F69C00A1B2A6CA200FB2CE0 /* LineChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F69C0091B2A6CA200FB2CE0 /* LineChartViewController.swift */; };
 		B6016C611E0FAA9D0045EFD4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = B6016C601E0FAA9D0045EFD4 /* Podfile */; };
 		B6016C631E0FCE020045EFD4 /* VisitorCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6016C621E0FCE020045EFD4 /* VisitorCount.swift */; };
+		B6016C651E0FF35D0045EFD4 /* PieChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6016C641E0FF35D0045EFD4 /* PieChartViewController.swift */; };
 		CD2DA5DF5C9CA59E3D1A3936 /* Pods_iOSChartsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FCE7C55B16486047ED6472E /* Pods_iOSChartsDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,11 +52,12 @@
 		5F69BFF01B2A6B8200FB2CE0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5F69BFF31B2A6B8200FB2CE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		5F69BFF91B2A6B8300FB2CE0 /* iOSChartsDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSChartsDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5F69C0091B2A6CA200FB2CE0 /* ChartsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
+		5F69C0091B2A6CA200FB2CE0 /* LineChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChartViewController.swift; sourceTree = "<group>"; };
 		6483ADB5BEB998DF894B9C76 /* Pods-iOSChartsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSChartsDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSChartsDemo/Pods-iOSChartsDemo.release.xcconfig"; sourceTree = "<group>"; };
 		A832D5211FCFBC3B07433E1E /* Pods-iOSChartsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSChartsDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSChartsDemo/Pods-iOSChartsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		B6016C601E0FAA9D0045EFD4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B6016C621E0FCE020045EFD4 /* VisitorCount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorCount.swift; sourceTree = "<group>"; };
+		B6016C641E0FF35D0045EFD4 /* PieChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +122,8 @@
 				5F69BFE91B2A6B8200FB2CE0 /* AppDelegate.swift */,
 				5F69BFEB1B2A6B8200FB2CE0 /* BarChartViewController.swift */,
 				B6016C621E0FCE020045EFD4 /* VisitorCount.swift */,
-				5F69C0091B2A6CA200FB2CE0 /* ChartsViewController.swift */,
+				5F69C0091B2A6CA200FB2CE0 /* LineChartViewController.swift */,
+				B6016C641E0FF35D0045EFD4 /* PieChartViewController.swift */,
 				5F69BFED1B2A6B8200FB2CE0 /* Main.storyboard */,
 				5F69BFF01B2A6B8200FB2CE0 /* Images.xcassets */,
 				5F69BFF21B2A6B8200FB2CE0 /* LaunchScreen.xib */,
@@ -293,7 +296,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F69C00A1B2A6CA200FB2CE0 /* ChartsViewController.swift in Sources */,
+				5F69C00A1B2A6CA200FB2CE0 /* LineChartViewController.swift in Sources */,
+				B6016C651E0FF35D0045EFD4 /* PieChartViewController.swift in Sources */,
 				5F69BFEC1B2A6B8200FB2CE0 /* BarChartViewController.swift in Sources */,
 				B6016C631E0FCE020045EFD4 /* VisitorCount.swift in Sources */,
 				5F69BFEA1B2A6B8200FB2CE0 /* AppDelegate.swift in Sources */,

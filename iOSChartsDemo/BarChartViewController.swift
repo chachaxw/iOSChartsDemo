@@ -8,10 +8,25 @@
 
 import UIKit
 import Charts
+import RealmSwift
 
 class BarChartViewController: UIViewController {
 
     @IBOutlet weak var barView: BarChartView!
+    
+    @IBOutlet weak var textValue: UITextField!
+    
+    @IBOutlet weak var addButton: UIButton!
+    
+    @IBAction func addBtnTapper(_ sender: Any) {
+        if let value = textValue.text, value != "" {
+            let visitorCount = VisitorCount()
+            visitorCount.count = (NumberFormatter().number(from: value)?.intValue)!
+            visitorCount.save()
+            textValue.text = ""
+        }
+        updateChartWithData()
+    }
     
     weak var axisFormatDelegate: IAxisValueFormatter?
     
@@ -19,18 +34,15 @@ class BarChartViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         barView.noDataText = "There's no data in your chart"
-        
         updateChartWithData()
     }
 
     func updateChartWithData() {
         var dataEntries: [BarChartDataEntry] = []
-//        let visitorCounts = getVisitorCountsFromDataBase()
-        let visitorCounts = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
+        let visitorCounts = getVisitorCountsFromDataBase()
         
         for i in 0..<visitorCounts.count {
-//            let timeIntervalForDate: TimeInterval = visitorCounts[i].date.timeIntervalSince1970
-            let dataEntry = BarChartDataEntry(x: Double(visitorCounts[i]), y: Double(i))
+            let dataEntry = BarChartDataEntry(x: Double(i), y: Double(visitorCounts.count))
             dataEntries.append(dataEntry)
         }
         
@@ -43,8 +55,13 @@ class BarChartViewController: UIViewController {
         
     }
     
-    func getVisitorCountsFromDataBase() {
-        
+    func getVisitorCountsFromDataBase() -> Results<VisitorCount> {
+        do {
+            let realm = try Realm()
+            return realm.objects(VisitorCount.self)
+        } catch let error as NSError {
+            fatalError(error.localizedDescription)
+        }
     }
 
 }

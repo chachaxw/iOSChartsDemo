@@ -7,11 +7,10 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Bar Chart View Controller-->
+        <!--Bar Chart-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="BarChartViewController" customModule="iOSChartsDemo" customModuleProvider="target" sceneMemberID="viewController">
@@ -24,66 +23,87 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MLy-Ta-0hc" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="38" y="102" width="299" height="520"/>
+                                <rect key="frame" x="0.0" y="110" width="375" height="557"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="添加数据" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lUU-61-WKM">
+                                <rect key="frame" x="16" y="72" width="289" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBA-ap-vfX">
+                                <rect key="frame" x="321" y="71" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addBtnTapper:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8sW-8r-gfC"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.97105258707499997" green="0.9494325783944445" blue="0.92520840304722229" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="MLy-Ta-0hc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="22" id="2bd-ng-dTp"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MLy-Ta-0hc" secondAttribute="bottom" constant="45" id="8Up-v5-j22"/>
-                            <constraint firstItem="MLy-Ta-0hc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="38" id="Ydd-Bf-8K7"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="MLy-Ta-0hc" secondAttribute="trailing" constant="22" id="sbM-Ec-9hV"/>
+                            <constraint firstItem="XBA-ap-vfX" firstAttribute="leading" secondItem="lUU-61-WKM" secondAttribute="trailing" constant="16" id="1ck-b7-DjI"/>
+                            <constraint firstItem="MLy-Ta-0hc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="2bd-ng-dTp"/>
+                            <constraint firstItem="MLy-Ta-0hc" firstAttribute="top" secondItem="lUU-61-WKM" secondAttribute="bottom" constant="8" id="4kL-PR-MWh"/>
+                            <constraint firstItem="XBA-ap-vfX" firstAttribute="baseline" secondItem="lUU-61-WKM" secondAttribute="baseline" id="7jg-7I-z7C"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MLy-Ta-0hc" secondAttribute="bottom" id="8Up-v5-j22"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XBA-ap-vfX" secondAttribute="trailing" constant="8" id="9nZ-Qk-jst"/>
+                            <constraint firstItem="lUU-61-WKM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="FB5-y4-XCs"/>
+                            <constraint firstItem="MLy-Ta-0hc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="46" id="Ydd-Bf-8K7"/>
+                            <constraint firstItem="lUU-61-WKM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="pdX-ig-56X"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MLy-Ta-0hc" secondAttribute="trailing" constant="-16" id="sbM-Ec-9hV"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Bar Chart" id="QjT-oE-2uh"/>
                     <connections>
+                        <outlet property="addButton" destination="XBA-ap-vfX" id="BSe-CD-9Pv"/>
                         <outlet property="barView" destination="MLy-Ta-0hc" id="L0u-ES-pCW"/>
+                        <outlet property="textValue" destination="lUU-61-WKM" id="CwV-3l-TJB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1786" y="770"/>
+            <point key="canvasLocation" x="2165.5999999999999" y="465.51724137931041"/>
         </scene>
-        <!--Charts View Controller-->
-        <scene sceneID="5lS-Hu-cvw">
+        <!--Line Chart-->
+        <scene sceneID="esR-Gc-3ow">
             <objects>
-                <viewController id="hoD-GK-Z3Q" customClass="ChartsViewController" customModule="iOSChartsDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XbR-jA-coO" customClass="LineChartViewController" customModule="iOSChartsDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="lQe-gc-FaG"/>
-                        <viewControllerLayoutGuide type="bottom" id="dBp-Vt-CK8"/>
+                        <viewControllerLayoutGuide type="top" id="mjC-oX-BRP"/>
+                        <viewControllerLayoutGuide type="bottom" id="FIB-HW-DJ3"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Pfa-HZ-lz6">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                    <view key="view" contentMode="scaleToFill" id="RPM-6t-X1Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lkd-cD-xsO" userLabel="Pie Chart View">
-                                <rect key="frame" x="0.0" y="301.5" width="375" height="301.5"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2y5-fU-w8q" userLabel="Line Chart View">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="301.5"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="2y5-fU-w8q" firstAttribute="height" secondItem="Pfa-HZ-lz6" secondAttribute="height" multiplier="0.5" id="3bI-3o-odo"/>
-                            <constraint firstAttribute="trailing" secondItem="Lkd-cD-xsO" secondAttribute="trailing" id="AO1-va-MpM"/>
-                            <constraint firstAttribute="trailing" secondItem="2y5-fU-w8q" secondAttribute="trailing" id="GbW-nP-OxY"/>
-                            <constraint firstItem="2y5-fU-w8q" firstAttribute="top" secondItem="Pfa-HZ-lz6" secondAttribute="top" id="IlU-7N-SJZ"/>
-                            <constraint firstAttribute="bottom" secondItem="Lkd-cD-xsO" secondAttribute="bottom" id="KDk-NM-Lcl"/>
-                            <constraint firstItem="Lkd-cD-xsO" firstAttribute="leading" secondItem="Pfa-HZ-lz6" secondAttribute="leading" id="NV7-0G-JS5"/>
-                            <constraint firstItem="2y5-fU-w8q" firstAttribute="leading" secondItem="Pfa-HZ-lz6" secondAttribute="leading" id="eQF-d7-lMr"/>
-                            <constraint firstItem="Lkd-cD-xsO" firstAttribute="height" secondItem="Pfa-HZ-lz6" secondAttribute="height" multiplier="0.5" id="zYe-qb-diR"/>
-                        </constraints>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="Line Chart" id="ggQ-8j-8u1"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hAF-Aj-ayK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KSn-3B-7G4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1787" y="1534"/>
+            <point key="canvasLocation" x="2165" y="1181"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Pie Chart-->
+        <scene sceneID="jTT-9x-OeQ">
+            <objects>
+                <viewController id="qXe-Zf-IX1" customClass="PieChartViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SUR-CO-CUV"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Q1-BD-wsX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="s1E-Tz-2Tz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Pie Chart" id="8iq-n8-5Ok"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gpc-g6-1xy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2164" y="1922"/>
+        </scene>
+        <!--Charts-->
         <scene sceneID="QUu-iL-6Do">
             <objects>
                 <tableViewController id="dx7-4d-0Py" sceneMemberID="viewController">
@@ -121,7 +141,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Other Charts" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c07-v8-Okb">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Line Chart" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c07-v8-Okb">
                                                     <rect key="frame" x="15" y="0.0" width="325" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -131,7 +151,27 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="hoD-GK-Z3Q" kind="show" id="lq2-Ew-D5l"/>
+                                            <segue destination="XbR-jA-coO" kind="show" id="Xhq-N9-8M6"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="2dH-zb-f7b" style="IBUITableViewCellStyleDefault" id="RzG-dG-Mv6">
+                                        <rect key="frame" x="0.0" y="88" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RzG-dG-Mv6" id="LK0-iA-Awx">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Pie Chart" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2dH-zb-f7b">
+                                                    <rect key="frame" x="15" y="0.0" width="325" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="qXe-Zf-IX1" kind="show" id="7av-bY-SLA"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -142,7 +182,7 @@
                             <outlet property="delegate" destination="dx7-4d-0Py" id="nqE-EB-WjZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="NAO-yW-Wk1"/>
+                    <navigationItem key="navigationItem" title="Charts" id="NAO-yW-Wk1"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HEx-XE-dvO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
