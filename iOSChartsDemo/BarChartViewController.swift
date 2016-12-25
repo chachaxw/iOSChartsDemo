@@ -34,7 +34,7 @@ class BarChartViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         barView.noDataText = "There's no data in your chart"
-        updateChartWithData()
+        axisFormatDelegate = self
     }
 
     func updateChartWithData() {
@@ -42,7 +42,8 @@ class BarChartViewController: UIViewController {
         let visitorCounts = getVisitorCountsFromDataBase()
         
         for i in 0..<visitorCounts.count {
-            let dataEntry = BarChartDataEntry(x: Double(i), y: Double(visitorCounts.count))
+            let timeIntervalForDate: TimeInterval = visitorCounts[i].date.timeIntervalSince1970
+            let dataEntry = BarChartDataEntry(x: timeIntervalForDate, y: Double(visitorCounts[i].count))
             dataEntries.append(dataEntry)
         }
         
@@ -67,9 +68,15 @@ class BarChartViewController: UIViewController {
 }
 
 // MARK: axisFormatDelegate
-//extension ViewController: IAxisValueFormatter {
-//    
-//}
+extension BarChartViewController: IAxisValueFormatter {
+    
+    func stringForValue(_ value: Double, axis: AxisBase?) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:ss.mm"
+        
+        return dateFormatter.string(from: Date(timeIntervalSince1970: value))
+    }
+}
 
 
 
